@@ -1,0 +1,29 @@
+<div class="ui inverted fixed menu">
+  <div class="ui secondary pointing menu">
+    <a class="item" [routerLink]="['Home']">
+      <img src="resources/static/pic/logo-.png"  />
+    </a>
+    <a class="item" [routerLink]="['Home']">
+      <h2>Stanapp</h2>
+    </a>
+      <a class="item" [routerLink]="['Home']">
+       <strong>Home</strong>
+      </a>
+    </div>
+
+  <div class="ui secondary pointing menu">
+    <a class="item" [routerLink]="['Home']">
+      <strong>Stanapp - </strong>   Inovative Mobile Operator
+    </a>
+  </div>
+
+
+    <div class="right menu">
+      <a *ngIf="!loginService.checkLogin()"  class="item" [routerLink]="['Register']">
+        Register
+      </a>
+      <a class="item" [routerLink]="['Login']" (click)="onClick()">
+        {{loginService.checkLogin()? 'Logout' : 'Login'}}
+      </a>
+    </div>
+  </div>
